@@ -1,18 +1,4 @@
-﻿/*create or replace trigger trg_tbl_tvm_mk
-   after insert or update
-   on mk_tvm_payment_detail
---   referencing new as newest old as old2
-   for each row
-declare
-
-v_row mk_tvm_payment_detail%rowtype;
-v_tt number;
-begin
-select  from :new; 
-
-end;*/
-
-create or replace trigger trg_tbl_tvm_mk
+﻿create or replace trigger trg_tbl_tvm_mk
 for insert or update  on mk_tvm_payment_detail
 compound trigger
    -- declarative section (optional)
